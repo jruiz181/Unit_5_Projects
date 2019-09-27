@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: jeremiah ruiz
+   Date:   9-27-19
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+/* the articel element is floated to the left and th width is set to 384px */
+article{
+   float: left;
+   width: 384px;
+}
+
+
+/* First Line and Drop Cap Styles */
+/* the first line of every paragraph will now be in small caps with a font size of 1.25em */
+article:first-of-type p::first-line{
+   font-variant: small-caps;
+   font-size: 1.25em
+}
+/*  the first pararaph letter will be in a large cap with dont size of 4 em. there is also margin spacing aloong with line height. */
+ article p:first-of-type::first-letter{
+    font-size: 4em;
+    font-family: serif;
+    float: left;
+    line-height: 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+ }
+
+/* Aside Styles */
+/* the aside element has a width of 768px and is floated left. */
+aside{
+   width: 768px;
+   float: left;
+}
+
+
+
+/* Map Styles */
+/* the div withh the id battlemap is set to a width of 688px and margin spacing included. the positions is set relative. */
+div#battleMap{
+   width: 688px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+
+}
+/*  the img with the id mapimage is displayed as a block and width is set to 100% */
+img#mapImage{
+   display: block;
+   width: 100%;
+}
+
+
+/* Interactive Map Styles */
+/* every hyper link with the class battle markers in it has a postion of absolute. */
+a[class^="battleMarkers"]{
+   position: absolute;
+}
+/*  all of the battle markers are set to a specific place on the html to match the map info. */
+a#marker1{
+   top: 220px;
+   left: 340px;
+}
+a#marker2{
+   top: 194px;
+   left: 358px;
+}
+a#marker3{
+   top: 202px;
+   left: 400px;
+}
+a#marker4{
+   top: 217px;
+   left: 452px;
+}
+a#marker5{
+   top: 229px;
+   left: 498px;
+}
+a#marker6{
+   top: 246px;
+   left: 544px;
+}
+
+
+
+/* Map Information Styles */
+/* this hides the map info  */
+div.mapInfo{
+   display: none;
+}
+/*  shows the maoinfo when the link is hovered over */
+a.battleMarkers:hover + div.mapInfo, a.battleMarkers:active + div.mapInfo{
+   display:block;
+}

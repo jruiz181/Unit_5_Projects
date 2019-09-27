@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 2
+   
+   Style Sheet for Costume Expressions Front Page
+   Author: jeremiah ruiz
+   Date:   9-26-19
+   
+   Filename: ce_styles.css
+*/
+
+
+/* Window and Body Styles */
+/* sets the html backround color the the selected */
+html{
+   background-color: rgb(101, 101, 101)
+}
+/* everything in the bodyy element is affected by all the set attributes like widths and colors. */
+body{
+   background-color: white;
+   font-family: verdana, Geneva, arial, Sans-serif;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 95%;
+   min-width: 320px;
+   max-width: 960px;
+   position: relative;
+}
+/* sets the images to be displayed as a block */
+img{
+   display: block;
+   width: 100%;
+}
+/* all links lose the line under them */
+nav a{
+   text-decoration: none;
+}
+
+/* Body Header Styles */
+/* the header within the body has a chnaged color and a set height of 40px */
+body header{
+   background-color: rgb(191, 68, 70);
+   height: 40px;  
+}
+/* the list within the nav within the body header having set margin spacing and padding space */
+body header nav ul li {
+   display: block;
+   float: left;
+   margin-right: 20%;
+   padding-top: 10px;
+   padding-top: 10px;
+   padding-left: 0px;
+   padding-right: 0px;
+}
+/* the link within the body headers font size is changed and color as well. */
+body header nav ul li a{
+   font-size: 0.9em;
+   color: rgb(51, 51, 51)
+}
+/* active links have a changed color */
+body header nav a:hover, body header nav a:active{
+   color: rgb(255, 211, 211)
+}
+/* DIV Container Styles */
+/* the id container has padding bottom and right set to 8 px */
+div#container{
+   padding-bottom: 8px;
+   padding-right: 8px;
+}
+
+/* Footer Styles */
+/*  the footer positions is absolute and its spacing is set along with text alignment and font size */
+footer{
+position: absolute;
+right: 8px;
+bottom: 8px;
+color: rgb(143, 33, 36);
+text-align: right;
+font-size: 2vmin;
+}

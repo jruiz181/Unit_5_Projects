@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Layout styles for Slate and Pencil Tutoring
+   Author: Jeremiah Ruiz
+   Date: 9-24-19   
+   
+   Filename: sp_layout.css
+
+*/
+
+/* Window and Body Styles */
+/* Sets the whole webpage to the hieght to fit all maximum hieght */
+html{
+   height: 100%;
+}
+/* Sets the body yo the selected attributes, and the margins to auto to set the page horizontal  */
+body{
+   width: 95%;
+   min-width: 640px;
+   max-width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+   min-height: 100%;
+}
+/* all the selected elements now have a border box */
+header, ul, nav, li, a{
+   box-sizing: border-box;
+}
+
+
+
+/* Row Styles */
+/* the selected class has it displayed to the both clear sides */
+.row::after{
+   clear: both;
+   content: "";
+   display: table
+}
+
+
+
+/* Page Header Styles */
+/* the img within the header within the body is displayed as a block and with the selected attributes. */
+body header img{
+display: block;
+width: 70%;
+float: left;
+}
+/*  the body withi/in header has selected attributes that affects the padding space and the width. */
+body header>nav{
+   float: left;
+   padding-left: 2%;
+   padding-right: 2%;
+   width: 30%;
+}
+/* the header nav anchor is displayed with a block and a width of 100% */
+header nav a{
+   display: block;
+   width: 100%;
+}
+/* nav with the class horizontal has a block and floated left */
+/* Horizontal Navigation List Styles */
+nav.horizontal li{
+   display: block;
+   width:12.5%;
+   float: left;
+}
+
+
+
+/* Topics Styles */
+/*  */
+ul#topics li{
+   display: block;
+   width: 20%;
+   float: left;
+   margin-left: 0%;
+   margin-right: 1.5%;
+}
+
+#topics:first-of-type{
+   margin-left: 7.75%
+}
+#topics:last-of-type{
+   margin-right: 7.75%
+}
+li img{
+   display: block;
+   width: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
+/* HR Styles */
+hr{
+   width: 50%;
+}
+
+
+
+/* Customer Comment Styles */
+
+ul#comments{
+   width: 75%;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   margin-left: auto;
+   margin-right: auto;
+}
+#comments li{
+   display: block;
+   width: 50%;
+   float: left;
+   margin-bottom: 30px;
+}/* the comment images are blocked, floated left and set margin space with set width. */
+#comments img{
+   display: block;
+   width: 20%;
+   float: left;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+/* the comments paragraphs are floated left wiht set width */
+#comments li p{
+   float: left;
+   width: 70%;
+}
+/* Footer Styles */
+/* clear both sides for the footee. */
+footer{
+   clear: both
+}
